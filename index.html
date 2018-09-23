@@ -45,22 +45,20 @@
 				document.getElementById(divId).style.display = 'none';
 				if (divId == 'item10') {
 					var classVal = document.getElementById("itemH10").getAttribute("class");
-					classVal = classVal.concat("h2-last-border-show");
-					document.getElementById("itemH10").setAttribute("class",classVal );
+					classVal = classVal.concat("item-last-border-show");
+					document.getElementById("itemH10").setAttribute("class",classVal);
 				}
 				self.getElementsByTagName('img')[0].src = ".\\image\\arrow_down.png";
-				/*document.getElementById(imgId).src = ".\\image\\arrow_down.png";*/
 			}
 			else {
 				//显示内容
 				document.getElementById(divId).style.display = 'block';
 				if (divId == 'item10') {
 					var classVal = document.getElementById("itemH10").getAttribute("class");
-					classVal = classVal.replace("h2-last-border-show", '');
-					document.getElementById("itemH10").setAttribute("class",classVal );
+					classVal = classVal.replace("item-last-border-show", '');
+					document.getElementById("itemH10").setAttribute("class",classVal);
 				}
 				self.getElementsByTagName('img')[0].src = ".\\image\\arrow_up.png";
-				/*document.getElementById(imgId).src = ".\\image\\arrow_up.png";*/
 			}
 		}
     </script>
