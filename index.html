@@ -16,11 +16,11 @@
             h1{font-family:"AvenirNext-Medium";color:#404040;font-size:1.6em;line-height:1.3em;margin-bottom:.78571em}
             h2{font-family:"AvenirNext-Medium";color:#404040;font-size:1.3em;line-height:1em;line-height:1.5em;padding:0.5em 1em;border-top:1px solid #E6E6E6;}
             h3{font-family:"AvenirNext-Medium";color:#404040;font-size:1.15em;line-height:1em;padding:0.5em 0em;}
-			img{max-width:80%; padding:1em 1.5em;}
+			img{max-width:80%;padding:1em 1.5em;}
             .content-wrapper{max-width:46em;margin:0px auto;}
             .content-wrapper.spotlight-preview{overflow-x:hidden}
             .content-step-p p{padding:0;}
-			.content-desc {background-color:#f1f1f1; padding:0em 1.5em;border-top:1px solid #E6E6E6;}
+			.content-desc {background-color:#f1f1f1;padding:0em 1.5em;border-top:1px solid #E6E6E6;display:none;}
 
 	        h2:active{
 			    background-color:#f1f1f1;
@@ -31,15 +31,24 @@
 <body>
 	<script type="text/javascript">
         document.body.addEventListener('touchstart', function () {
-    });
+    	});
+
+    	function clickItem(diving) {
+			if (document.getElementById(diving).style.display == "block") {
+				document.getElementById(diving).style.display = 'none';
+			}
+			else {
+				document.getElementById(diving).style.display = 'block';
+			}
+		}
     </script>
 	<div class="content-wrapper">
-		<h2>什么手机设备可以设置Live动态壁纸？</h2>
-		<div class="content-desc">
+		<h2 onclick="clickItem('item1')">什么手机设备可以设置Live动态壁纸？</h2>
+		<div class="content-desc" id="item1">
 			<p>动态壁纸功能需使用3D Touch。目前仅iPhone 6s及以上型号的苹果手机支持设定Live动态壁纸。且只有锁定屏幕下，按压屏幕才有动态效果。</p>
 		</div>
-		<h2>怎么设置Live动态壁纸？</h2>
-		<div class="content-desc">
+		<h2 onclick="clickItem('item2')">怎么设置Live动态壁纸？</h2>
+		<div class="content-desc" id="item2">
 			<h3>1. 从【设置】中设定 </h3>
 			<div class="content-step-p">
 				<p>第一步：【设置】->【墙纸】</p>
@@ -66,69 +75,88 @@
 				<img src=".\image\settings2.jpg" />
 			</div>
 		</div>
-		<h2>为什么设置Live动态壁纸后，屏幕没有动态效果？</h2>
-		<h3>原因可能有如下三个：</h3>
-		<div class="content-step-p">
-			<p>1. 请确认您的设备是否支持3D Touch，设备型号是否为iPhone 6s及以上机型。</p>
-			<p>2. 将Live动态壁纸设定成主屏幕了。目前苹果手机仅锁定屏幕支持Live壁纸动态效果，主屏幕不支持。</p>
-			<p>3. 墙纸预览时，底部选择了【静止】或【透视】模式。只有选择【实况照片】模式后【设定锁定屏幕】或【同时设定】，锁定屏幕下才有动态效果。</p>
-		</div>
-		<h2>为什么Live动态壁纸在图库预览有声音，设置为锁屏壁纸之后没有声音？</h2>
-			<p>该问题受限制于iOS系统本身，系统在锁屏壁纸预览动态壁纸，会强制静音处理，该问题暂时无法解决。</p>
-		<h2>为什么程序内预览Live动态壁纸没有声音？</h2>
-			<p>请确保设备没有调整为静音模式，以及调整音量大小。</p>
-		<h2>如何将Live动态壁纸分享或者发送给朋友？</h2>
-			<p>打开系统图库->选择要分享的Live动态壁纸->点击左下角的分享按钮即可。</p>
-		<h2>为什么Live动态壁纸在图库预览清晰，设置为锁屏壁纸之后模糊？</h2>
-			<p>该问题受限于iOS系统本身，系统为了更高性能考虑，对壁纸做了另外的优化处理，可能会降低画质，该问题暂时无法解决。</p>
-		<h2>如何解锁高级版？</h2>
-		<h3>第一步：确认手机是否打开【App内购买项目】</h3>
-		<div class="content-step-p">
-			<h4>iOS11可通过以下方式打开：</4>
-				<p>在设置中，搜索【访问限制】</p>
-				<img src=".\image\ios11_pay_step1.jpg" />
-				<p>找到【App 内购买项目】开关，并【打开】</p>
-				<img src=".\image\ios11_pay_step2.jpg" />
-			<br>
-			<br>
-			<h4>iOS12可通过以下方式打开：</4>
-				<p>在设置中，搜索【访问限制】</p>
-				<img src=".\image\ios12_pay_step1.jpg" />
-				<p>选择【iTunes Store 与 App Store程序购买】</p>
-				<img src=".\image\ios12_pay_step2.jpg" />
-				<p>找到【App 内购买项目】开关，并【打开】</p>
-				<img src=".\image\ios12_pay_step3.jpg" />
-		</div>
-		<h3>第二步：进入App内，解锁高级版</h3>
-		<div class="content-step-p">
-			<p>【设置】->【升级高级版】</p>
-			<img src=".\image\pay_step1.jpg" />
-			<p>1. 从未购买过，选择底部【解锁】升级为高级版</p>
-			<p>2. 已经购买过，选择【恢复购买】恢复高级版继续使用</p>
-			<img src=".\image\pay_step2.jpg" />
-		</div>
-		<h2>程序内购付费失败/付费不解锁/恢复购买失败？</h2>
-		<h3>1. 付费失败</h3>
-		<div class="content-step-p">
-			<p>1.1 确保网络连接正常</p>
-			<p>1.2 确保手机已经允许【App内程序购买】，在设置中，搜索【访问限制】，找到【App 内购买项目】开关，并【打开】。可参考【如何解锁高级版？】问题中的方法检查！</p>
-			<p>1.3 进入程序，进行【设置】->【解锁】操作。</p>
-		</div>
-		<h3>2. 扣款成功，不解锁高级版 </h3>
+		<h2 onclick="clickItem('item3')">为什么设置Live动态壁纸后，屏幕没有动态效果？</h2>
+		<div class="content-desc" id="item3">
+			<h3>原因可能有如下三个：</h3>
 			<div class="content-step-p">
-			<p>2.1 确保网络连接正常</p>
-			<p>2.2 确保手机已经允许【App内程序购买】，在设置中，搜索【访问限制】，找到【App 内购买项目】开关，并【打开】。可参考【如何解锁高级版？】问题中的方法检查！</p>
-			<p>2.3 进入程序，进行【设置】->【升级高级版】->【恢复购买】操作。</p>
+				<p>1. 请确认您的设备是否支持3D Touch，设备型号是否为iPhone 6s及以上机型。</p>
+				<p>2. 将Live动态壁纸设定成主屏幕了。目前苹果手机仅锁定屏幕支持Live壁纸动态效果，主屏幕不支持。</p>
+				<p>3. 墙纸预览时，底部选择了【静止】或【透视】模式。只有选择【实况照片】模式后【设定锁定屏幕】或【同时设定】，锁定屏幕下才有动态效果。</p>
+			</div>
 		</div>
-		<h3>3. 恢复购买失败 </h3>
-		<div class="content-step-p">
-			<p>3.1 确保网络连接正常</p>
-			<p>3.2 确保手机已经允许【App内程序购买】，在设置中，搜索【访问限制】，找到【App 内购买项目】开关，并【打开】。可参考【如何解锁高级版？】问题中的方法检查！</p>
-			<p>3.3 确保下载应用的Apple账号和当时购买的账号是一致的，否则恢复购买失败。</p>
-			<p>3.4 进入程序，进行【设置】->【升级高级版】->【恢复购买】操作。</p>
+		<h2 onclick="clickItem('item4')">为什么Live动态壁纸在图库预览有声音，设置为锁屏壁纸之后没有声音？</h2>
+		<div class="content-desc" id="item4">
+			<p>该问题受限制于iOS系统本身，系统在锁屏壁纸预览动态壁纸，会强制静音处理，该问题暂时无法解决。</p>
 		</div>
-		<h2>如以上情况都无法解决你的问题，你可以向苹果申请退款！</h2>
+		<h2 onclick="clickItem('item5')">为什么程序内预览Live动态壁纸没有声音？</h2>
+		<div class="content-desc" id="item5">
+			<p>请确保设备没有调整为静音模式，以及调整音量大小。</p>
+		</div>
+		<h2 onclick="clickItem('item6')">如何将Live动态壁纸分享或者发送给朋友？</h2>
+		<div class="content-desc" id="item6">
+			<p>打开系统图库->选择要分享的Live动态壁纸->点击左下角的分享按钮即可。</p>
+		</div>
+		<h2 onclick="clickItem('item7')">为什么Live动态壁纸在图库预览清晰，设置为锁屏壁纸之后模糊？</h2>
+		<div class="content-desc" id="item7">
+			<p>该问题受限于iOS系统本身，系统为了更高性能考虑，对壁纸做了另外的优化处理，可能会降低画质，该问题暂时无法解决。</p>
+		</div>
+		<h2 onclick="clickItem('item8')">如何解锁高级版？</h2>
+		<div class="content-desc" id="item8">
+			<h3>第一步：确认手机是否打开【App内购买项目】</h3>
+			<div class="content-step-p">
+				<h4>iOS11可通过以下方式打开：</4>
+					<p>在设置中，搜索【访问限制】</p>
+					<img src=".\image\ios11_pay_step1.jpg" />
+					<p>找到【App 内购买项目】开关，并【打开】</p>
+					<img src=".\image\ios11_pay_step2.jpg" />
+				<br>
+				<br>
+				<h4>iOS12可通过以下方式打开：</4>
+					<p>在设置中，搜索【访问限制】</p>
+					<img src=".\image\ios12_pay_step1.jpg" />
+					<p>选择【iTunes Store 与 App Store程序购买】</p>
+					<img src=".\image\ios12_pay_step2.jpg" />
+					<p>找到【App 内购买项目】开关，并【打开】</p>
+					<img src=".\image\ios12_pay_step3.jpg" />
+			</div>
+			<h3>第二步：进入App内，解锁高级版</h3>
+			<div class="content-step-p">
+				<p>【设置】->【升级高级版】</p>
+				<img src=".\image\pay_step1.jpg" />
+				<p>1. 从未购买过，选择底部【解锁】升级为高级版</p>
+				<p>2. 已经购买过，选择【恢复购买】恢复高级版继续使用</p>
+				<img src=".\image\pay_step2.jpg" />
+			</div>
+		</div>
+		<h2 onclick="clickItem('item9')">程序内购付费失败/付费不解锁/恢复购买失败？</h2>
+		<div class="content-desc" id="item9">
+			<h3>1. 付费失败</h3>
+			<div class="content-step-p">
+				<p>1.1 确保网络连接正常</p>
+				<p>1.2 确保手机已经允许【App内程序购买】，在设置中，搜索【访问限制】，找到【App 内购买项目】开关，并【打开】。可参考【如何解锁高级版？】问题中的方法检查！</p>
+				<p>1.3 进入程序，进行【设置】->【解锁】操作。</p>
+			</div>
+			<h3>2. 扣款成功，不解锁高级版 </h3>
+				<div class="content-step-p">
+				<p>2.1 确保网络连接正常</p>
+				<p>2.2 确保手机已经允许【App内程序购买】，在设置中，搜索【访问限制】，找到【App 内购买项目】开关，并【打开】。可参考【如何解锁高级版？】问题中的方法检查！</p>
+				<p>2.3 进入程序，进行【设置】->【升级高级版】->【恢复购买】操作。</p>
+			</div>
+			<h3>3. 恢复购买失败 </h3>
+			<div class="content-step-p">
+				<p>3.1 确保网络连接正常</p>
+				<p>3.2 确保手机已经允许【App内程序购买】，在设置中，搜索【访问限制】，找到【App 内购买项目】开关，并【打开】。可参考【如何解锁高级版？】问题中的方法检查！</p>
+				<p>3.3 确保下载应用的Apple账号和当时购买的账号是一致的，否则恢复购买失败。</p>
+				<p>3.4 进入程序，进行【设置】->【升级高级版】->【恢复购买】操作。</p>
+			</div>
+		</div>
+		<h2 onclick="clickItem('item10')" style="border-bottom:1px solid #E6E6E6;">如以上情况都无法解决你的问题，你可以向苹果申请退款！</h2>
+		<div class="content-desc" id="item10">
 			<a href="https://zhuanlan.zhihu.com/p/25825319?utm_medium=social&utm_source=weibo">退款流程可以参考网上流程</a>
+		</div>
 	</div>
+	<script type="text/javascript">
+		
+    });
 </body>
 </html>
