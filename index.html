@@ -12,15 +12,17 @@
             html{font-size:14px;line-height:1.6em;-webkit-text-size-adjust:100%}
             body{color:#545454;text-rendering:optimizeLegibility;font-family:"AvenirNext-Regular"}
             a{color:#de4c4f;text-decoration:none;}
-            p{padding:0.5em 0em 0.5em 0em; line-height:1.9em}
+            p{line-height:1.9em}
             h1{font-family:"AvenirNext-Medium";color:#404040;font-size:1.6em;line-height:1.3em;margin-bottom:.78571em}
-            h2{font-family:"AvenirNext-Medium";color:#404040;font-size:1.2em;line-height:1em;line-height:1.5em;padding:0.5em 1em;border-top:1px solid #E6E6E6;}
+            h2{font-family:"AvenirNext-Medium";color:#5a5a5a;font-size:1.2em;line-height:1em;line-height:1.5em;padding:0.5em 1em;border-top:1px solid #ECECEC;}
             h3{font-family:"AvenirNext-Medium";color:#404040;font-size:1.1em;line-height:1em;padding:0.5em 0em;}
 			img{max-width:80%;padding:1em 1.5em;}
             .content-wrapper{max-width:46em;margin:0px auto;}
             .content-wrapper.spotlight-preview{overflow-x:hidden}
             .content-step-p p{padding:0;}
-			.content-desc {background-color:#f1f1f1;padding:0em 1.5em;border-top:1px solid #E6E6E6;display:none;}
+			.content-desc {background-color:#f1f1f1;padding:1em 1.5em;border-top:1px solid #ECECEC;display:none;}
+			.h2-last-border-show{border-bottom:1px solid #ECECEC;}
+			
 
 	        h2:active{
 			    background-color:#f1f1f1;
@@ -36,9 +38,16 @@
     	function clickItem(diving) {
 			if (document.getElementById(diving).style.display == "block") {
 				document.getElementById(diving).style.display = 'none';
+				if (diving == 'item10') {
+					document.getElementById('itemH10').className = 'h2-last-border-show';
+				}
+
 			}
 			else {
 				document.getElementById(diving).style.display = 'block';
+				if (diving == 'item10') {
+					document.getElementById('itemH10').className = '';
+				}
 			}
 		}
     </script>
@@ -150,11 +159,9 @@
 				<p>3.4 进入程序，进行【设置】->【升级高级版】->【恢复购买】操作。</p>
 			</div>
 		</div>
-		<h2 onclick="clickItem('item10')" style="border-bottom:1px solid #E6E6E6;">如以上情况都无法解决你的问题，你可以向苹果申请退款！</h2>
+		<h2 onclick="clickItem('item10')" class="h2-last-border-show" id="itemH10">如以上情况都无法解决你的问题，你可以向苹果申请退款！</h2>
 		<div class="content-desc" id="item10">
-			<div style="padding:1em 0em;">
 				<a href="https://zhuanlan.zhihu.com/p/25825319?utm_medium=social&utm_source=weibo">退款流程可以参考网上流程</a>
-			</div>
 		</div>
 	</div>
 	<script type="text/javascript">
